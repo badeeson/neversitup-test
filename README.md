@@ -1,26 +1,59 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Neversitup Test
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This project implements functionalities using Nest.js for generating permutations, finding the odd integer, and counting valid smiling faces.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Project Structure
+
+The project follows the below directory structure:
+
+- `src/`: Contains the main source code of the application.
+  - `odd-int/`: Contains the logic for finding the odd integer.
+    - `odd-int.controller.spec.ts`
+    - `odd-int.controller.ts`
+    - `odd-int.service.spec.ts`
+    - `odd-int.service.ts`
+  - `permutations/`: Contains logic for permutations.
+    - `permutations.controller.spec.ts`
+    - `permutations.controller.ts`
+    - `permutations.service.spec.ts`
+    - `permutations.service.ts`
+  - `smiley-count/`: Contains logic for counting valid smiling faces.
+    - `smiley-count.controller.spec.ts`
+    - `smiley-count.controller.ts`
+    - `smiley-count.service.spec.ts`
+    - `smiley-count.service.ts`
+  - `app.controller.spec.ts`: File with unit tests for the root controller of the application.
+  - `app.controller.ts`: Root controller of the application.
+  - `app.module.ts`: Root module of the application.
+  - `app.service.ts`: Root service of the application.
+  - `main.ts`: Entry point of the application.
+- `test/`
+  - `app.e2e-spec.ts`: End-to-end tests for the application.
+  - `jest-e2e.json`: Configuration file for Jest end-to-end tests.
+- `.eslintrc.js`
+- `.gitignore`
+- `.prettierrc`
+- `LICENSE`
+- `README.md`: Project documentation describing the structure, conventions, and functionality details.
+- `nest-cli.json`: Nest CLI configuration file.
+- `package-lock.json`
+- `package.json`: Configuration file listing project dependencies and scripts.
+- `tsconfig.build.json`
+- `tsconfig.json`: TypeScript configuration file.
+
+## Functionalities Implemented
+
+### Permutations
+
+The `permutations` functionality generates all permutations of a non-empty input string and removes duplicates, following a recursive approach.
+
+### Odd Int
+
+The `odd-int` functionality finds the integer that appears an odd number of times within an array of integers, following specific rules to identify valid integers.
+
+### Smiley Count
+
+The `smiley-count` functionality counts the number of valid smiling faces within an array, considering the required characters for eyes, nose, and mouth.
 
 ## Description
 
@@ -58,16 +91,8 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+This README.md file provides an overview of the project structure, functionalities implemented, and instructions for running the project and tests. Adjust the content and details according to your specific project requirements and conventions.
